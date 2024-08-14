@@ -7,7 +7,7 @@ import { OrbitControls } from "@react-three/drei";
 import countries from "@/data/globe.json";
 import dynamic from "next/dynamic";
 
-const Globe = dynamic(() => import("./globe-main"), {
+const Globe = dynamic(() => import("./globe-main").then((m) => m.GlobeMain), {
   ssr: false,
 });
 
