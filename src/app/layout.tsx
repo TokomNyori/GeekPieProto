@@ -1,8 +1,36 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
+import Navbar from "@/components/Major/Navbar";
+import localFont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"] });
+const formulaCondensed = localFont({
+  src: [
+    {
+      path: "../assets/fonts/FormulaCondensedBold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/FormulaCondensedLight.otf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/FormulaCondensedRegular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/FormulaCondensedUltralight.otf",
+      weight: "100",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +44,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${GeistSans.className} dark`}>
+        <div className="relative w-full flex items-center justify-center">
+        <Navbar />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }

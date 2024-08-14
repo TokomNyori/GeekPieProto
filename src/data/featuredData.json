@@ -1,0 +1,154 @@
+{
+  "features": [
+    {
+      "id": 1,
+      "name": "AI Chatbot Suite",
+      "slug": "ai-chatbot-suite",
+      "description": "Revolutionize customer service with our AI-powered chatbot that provides 24/7 support and personalized user interactions.",
+      "price": 499.99,
+      "developer": "GeekPie",
+      "isFeatured": true,
+      "image": "/products/ai-chatbot.jpg",
+      "features": [
+        "Natural language processing",
+        "Customizable conversation flows",
+        "Multi-channel integration"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Smart Analytics Dashboard",
+      "slug": "smart-analytics-dashboard",
+      "description": "Gain deep insights into your business with our smart analytics dashboard that offers real-time data visualization and predictive analytics.",
+      "price": 599.99,
+      "developer": "GeekPie",
+      "isFeatured": false,
+      "image": "/products/analytics-dashboard.jpg",
+      "features": [
+        "Real-time data tracking",
+        "Customizable reports",
+        "AI-powered predictions"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "E-commerce Powerhouse",
+      "slug": "e-commerce-powerhouse",
+      "description": "Boost your online sales with our powerful e-commerce platform, featuring advanced AI-driven recommendations and seamless user experience.",
+      "price": 699.99,
+      "developer": "GeekPie",
+      "isFeatured": true,
+      "image": "/products/e-commerce.jpg",
+      "features": [
+        "AI-based product recommendations",
+        "Mobile-friendly design",
+        "Secure payment gateway"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Automated Marketing Assistant",
+      "slug": "automated-marketing-assistant",
+      "description": "Streamline your marketing efforts with our AI-powered assistant that automates campaign management and optimizes your strategies.",
+      "price": 799.99,
+      "developer": "GeekPie",
+      "isFeatured": false,
+      "image": "/products/marketing-assistant.jpg",
+      "features": [
+        "Automated campaign scheduling",
+        "AI-driven content suggestions",
+        "Detailed performance analytics"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Visual Web Designer",
+      "slug": "visual-web-designer",
+      "description": "Create stunning websites with our drag-and-drop web designer that combines powerful design tools with AI-enhanced features.",
+      "price": 899.99,
+      "developer": "GeekPie",
+      "isFeatured": false,
+      "image": "/products/web-designer.jpg",
+      "features": [
+        "Drag-and-drop interface",
+        "AI-driven design suggestions",
+        "Responsive design templates"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "AI-powered CRM System",
+      "slug": "ai-powered-crm-system",
+      "description": "Manage customer relationships efficiently with our AI-powered CRM that offers personalized customer insights and automated workflows.",
+      "price": 999.99,
+      "developer": "GeekPie",
+      "isFeatured": true,
+      "image": "/products/crm-system.jpg",
+      "features": [
+        "AI-driven customer insights",
+        "Automated task management",
+        "Seamless integration with existing tools"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Intelligent SEO Optimizer",
+      "slug": "intelligent-seo-optimizer",
+      "description": "Enhance your website's visibility with our intelligent SEO optimizer that uses AI to analyze and improve your site's ranking.",
+      "price": 1099.99,
+      "developer": "GeekPie",
+      "isFeatured": false,
+      "image": "/products/seo-optimizer.jpg",
+      "features": [
+        "AI-based keyword analysis",
+        "On-page SEO recommendations",
+        "Competitor analysis"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Cloud Backup Manager",
+      "slug": "cloud-backup-manager",
+      "description": "Ensure the safety of your data with our cloud backup manager that offers automated backups and quick recovery options.",
+      "price": 1199.99,
+      "developer": "GeekPie",
+      "isFeatured": true,
+      "image": "/products/backup-manager.jpg",
+      "features": [
+        "Automated backups",
+        "AI-driven data compression",
+        "Fast recovery options"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Enterprise Resource Planning",
+      "slug": "enterprise-resource-planning",
+      "description": "Optimize your business operations with our ERP system that integrates AI to streamline processes and improve efficiency.",
+      "price": 1299.99,
+      "developer": "GeekPie",
+      "isFeatured": false,
+      "image": "/products/erp-system.jpg",
+      "features": [
+        "AI-powered process automation",
+        "Real-time reporting",
+        "Customizable modules"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "AI-driven Cybersecurity",
+      "slug": "ai-driven-cybersecurity",
+      "description": "Protect your business with our AI-driven cybersecurity system that detects and mitigates threats in real-time.",
+      "price": 1399.99,
+      "developer": "GeekPie",
+      "isFeatured": true,
+      "image": "/products/cybersecurity.jpg",
+      "features": [
+        "AI-based threat detection",
+        "Real-time monitoring",
+        "Automated incident response"
+      ]
+    }
+  ]
+}
