@@ -1,6 +1,4 @@
-import { VelocityScroll } from "@/components/ui/scroll-velocity";
 import Image from "next/image";
-import { div } from "three/webgpu";
 import Imgeee from "@/assets/images/test.png";
 import IconInfiniteScroll from "../inhouse-ui/icon-infinite-scroll";
 import {

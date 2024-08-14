@@ -20,6 +20,9 @@ export const Cover = ({
   const [beamPositions, setBeamPositions] = useState<number[]>([]);
 
   useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
     if (ref.current) {
       setContainerWidth(ref.current?.clientWidth ?? 0);
 

@@ -3,7 +3,6 @@ import React, { useEffect, useRef, CSSProperties } from "react";
 import Image, { ImageProps } from "next/image";
 import { IconProps, Icon } from "@tabler/icons-react";
 import { IconType } from "react-icons";
-import { div } from "three/webgpu";
 
 type IconInfiniteScrollProps = {
   images: string[];

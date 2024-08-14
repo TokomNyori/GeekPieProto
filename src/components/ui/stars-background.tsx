@@ -66,6 +66,9 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
   );
 
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
     const updateStars = () => {
       if (canvasRef.current) {
         const canvas = canvasRef.current;
@@ -101,6 +104,9 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
   ]);
 
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
     const canvas = canvasRef.current;
     if (!canvas) return;
 
