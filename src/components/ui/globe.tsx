@@ -7,15 +7,15 @@ import { OrbitControls } from "@react-three/drei";
 import countries from "@/data/globe.json";
 import dynamic from "next/dynamic";
 
-const Globe = dynamic(() => import("./globe-main").then((m) => m.GlobeMain), {
-  ssr: false,
-});
-
 declare module "@react-three/fiber" {
   interface ThreeElements {
     threeGlobe: Object3DNode<ThreeGlobe, typeof ThreeGlobe>;
   }
 }
+
+const Globe = dynamic(() => import("./globemain").then((m) => m.GlobeMain), {
+  ssr: false,
+});
 
 //extend({ ThreeGlobe });
 
