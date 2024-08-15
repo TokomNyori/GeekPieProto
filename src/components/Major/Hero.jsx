@@ -67,7 +67,7 @@ function Hero() {
       </div>
       <div className="relative h-80 md:h-[36rem] lg:h-[100%] w-full flex justify-center items-start mt-14 md:mt-0">
         {/* <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-20" /> */}
-        <div className="absolute w-fit h-80 md:w-[95%] md:h-[95%] lg:w-[95%] lg:h-[95%] bottom-0 lg:bottom-2 z-10 p-0">
+        <div className="absolute w-full h-80 md:w-[95%] md:h-[95%] lg:w-[95%] lg:h-[95%] bottom-0 lg:bottom-2 z-10 p-0">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
