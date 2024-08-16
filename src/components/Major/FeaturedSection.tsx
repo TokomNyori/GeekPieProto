@@ -315,13 +315,13 @@ const items = [
   {
     title: "Industry-standard Tech, Every Time",
     description: (
-      <span className="text-sm">
+      <span className="text-base md:text-sm">
         We bring the latest and greatest tech to every project.
       </span>
     ),
     header: <SkeletonOne />,
     className: "md:col-span-1",
-    icon: <IconCpu className="h-4 w-4 text-neutral-500" />,
+    icon: <IconCpu className="h-6 w-6 md:h-4 md:w-4 text-neutral-500" />,
   },
   {
     title: "Real-Time Updates & Tracking",
@@ -332,7 +332,7 @@ const items = [
     ),
     header: <SkeletonTwo />,
     className: "md:col-span-1",
-    icon: <IconTrendingUp className="h-4 w-4 text-neutral-500" />,
+    icon: <IconTrendingUp className="h-6 w-6 md:h-4 md:w-4 text-neutral-500" />,
   },
   {
     title: "Hosting, deployment & maintenance",
@@ -344,7 +344,7 @@ const items = [
     ),
     header: <SkeletonThree />,
     className: "md:col-span-1",
-    icon: <IconCloud className="h-4 w-4 text-neutral-500" />,
+    icon: <IconCloud className="h-6 w-6 md:h-4 md:w-4 text-neutral-500" />,
   },
   {
     title: "Stunning Designs & Flawless Apps",
@@ -355,7 +355,7 @@ const items = [
     ),
     header: <SkeletonFour />,
     className: "md:col-span-2",
-    icon: <IconPalette className="h-4 w-4 text-neutral-500" />,
+    icon: <IconPalette className="h-6 w-6 md:h-4 md:w-4 text-neutral-500" />,
   },
 
   {
@@ -367,6 +367,6 @@ const items = [
     ),
     header: <SkeletonFive />,
     className: "md:col-span-1",
-    icon: <IconMessage className="h-4 w-4 text-neutral-500" />,
+    icon: <IconMessage className="h-6 w-6 md:h-4 md:w-4 text-neutral-500" />,
   },
 ];
