@@ -58,7 +58,7 @@ const Services = () => {
   return (
     <div className="w-full flex flex-col justify-start items-center section">
       <div className=" text-center px-6 max-w-2xl">
-        <h2 className="">We take care of it all!</h2>
+        <h2 className="uppercase">We take care of it all!</h2>
         <p className="text-lg italic">
           From design to deployment, we handle it all to get your web and mobile
           app launched and ready for action!

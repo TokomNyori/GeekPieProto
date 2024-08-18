@@ -53,7 +53,7 @@ function Hero() {
       {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_-75%,black)]"></div> */}
       <div className="relative w-full z-10 p-4 px-6 lg:px-8 text-center lg:text-start mt-2 lg:ml-10 lg:mt-0">
         <TailwindConnectBtn text="Introducing GeekPie" className="mb-4" />
-        <h1 className={clsx(`font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 text-4xl md:text-6xl py-1`)}>
+        <h1 className={clsx(`font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 uppercase text-4xl md:leading-none md:text-[3.5rem] py-1`)}>
           Cutting-Edge Apps. <br /> Stunning Design.
         </h1>
         <p className="mt-4 mb-4 font-normal text-base md:text-lg text-neutral-200 mx-auto lg:mx-0 max-w-lg">

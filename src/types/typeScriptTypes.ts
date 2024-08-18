@@ -9,3 +9,12 @@ export type featuredDataType = {
     image: string;
     features: string[];
 }
+
+
+export type partnersType = {
+    partner: string,
+    image: string,
+    width: number,
+    height: number,
+    description?: string,
+}

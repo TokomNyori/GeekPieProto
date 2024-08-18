@@ -6,6 +6,9 @@ import Services from "@/components/Major/Services";
 import TechIntegration from "@/components/Major/TechIntegration";
 import ChatBotIntro from "@/components/Major/ChatBotIntro";
 import FeaturedSection from "@/components/Major/FeaturedSection";
+import Partners from "@/components/Major/Partners";
+import Showcase from "@/components/Major/Showcase";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 export default function Home() {
   return (
@@ -14,10 +17,10 @@ export default function Home() {
       <Introduction />
       <AdvantageScroll />
       <TechIntegration />
-      {/* <Services /> */}
       <FeaturedSection />
-      <div className="h-[10rem] flex justify-center items-center text-3xl section">
-      </div>
+      <Partners />
+      <Showcase/>
+      <Services />
     </main>
   );
 }

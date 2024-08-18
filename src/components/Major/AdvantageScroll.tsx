@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function AdvantageScroll() {
   return (
-    <div className="">
+    <div className="pb-2">
       <ContainerScroll
         titleComponent={
           <>
