@@ -75,10 +75,10 @@ const features = [
 const Services = () => {
   return (
     <div className="section relative flex w-full flex-col items-center justify-start bg-grid-small-white/[0.2]">
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)] dark:bg-black"></div>
 
       <div className="z-10 max-w-2xl px-6 text-center">
-        <h2 className="flex items-center justify-center space-x-3 space-y-2 md:space-y-0 uppercase flex-wrap">
+        <h2 className="flex items-center justify-center gap-3 uppercase flex-wrap">
           <span>Our</span>
           <Cover className="flex items-center justify-center gap-x-2">
             Superpowers{" "}
@@ -106,7 +106,7 @@ const Services = () => {
                 disabled={!service.isFuncional}
                 className={cn(
                   "flex items-center justify-center relative rounded-lg bg-[#e6e5e5] px-8 py-2 font-light text-[#313131] shadow-[0_4px_14px_0_rgb(0,0,0,10%)] transition duration-200 ease-linear hover:shadow-[0_6px_20px_rgba(93,93,93,23%)]",
-                  "disabled:bg-[#5f5f5f] disabled:text-[#dfdede]",
+                  "disabled:bg-[#494949] disabled:text-[#dfdede]",
                 )}
               >
                 {service.isFuncional ? "Select" : "Coming Soon"}
