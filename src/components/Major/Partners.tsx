@@ -1,4 +1,4 @@
-import { partners } from "@/data/generalData";
+import { partners } from "@/data/GeneralData";
 import { partnersType } from "@/types/typeScriptTypes";
 import Image from "next/image";
 import React from "react";
@@ -13,7 +13,10 @@ function Partners() {
         {partners.map((partner: partnersType, index) => {
           if (partner.description) {
             return (
-              <div key={index} className="flex items-center justify-end space-x-3">
+              <div
+                key={index}
+                className="flex items-center justify-end space-x-3"
+              >
                 <div className="">
                   <Image
                     key={index}

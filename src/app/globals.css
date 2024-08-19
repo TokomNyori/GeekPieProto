@@ -10,7 +10,7 @@
 
 @layer base {
   body {
-    @apply bg-black text-gray-200
+    @apply bg-black text-gray-200;
   }
 
   h1 {
@@ -27,6 +27,32 @@
 
   .section {
     @apply py-20;
+  }
+
+  .glow-texts {
+    animation: glowText 3.5s linear infinite;
+  }
+
+  @keyframes glowText {
+    0% {
+      @apply text-red-400;
+    }
+
+    25% {
+      @apply text-green-400;
+    }
+
+    50% {
+      @apply text-blue-400;
+    }
+
+    75% {
+      @apply text-yellow-400;
+    }
+
+    100% {
+      @apply text-red-400;
+    }
   }
 }
 

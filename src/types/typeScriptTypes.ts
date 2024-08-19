@@ -1,3 +1,5 @@
+import { IconType } from "react-icons"
+
 export type featuredDataType = {
     id: number;
     name: string;
@@ -17,4 +19,16 @@ export type partnersType = {
     width: number,
     height: number,
     description?: string,
+}
+
+
+export type servicesType = {
+    id: number,
+    title: string,
+    description: string,
+    isFuncional: boolean,
+    icons: {
+        iconId: string,
+        icon: React.ReactNode,
+    }[];
 }

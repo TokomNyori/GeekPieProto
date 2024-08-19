@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   IconAdjustmentsBolt,
@@ -13,8 +14,25 @@ import {
   IconHelp,
   IconRouteAltLeft,
   IconTerminal2,
+  IconBolt,
 } from "@tabler/icons-react";
 import FeaturedCard from "../ui/featured-cards";
+import { Cover } from "../ui/cover";
+// import { Card } from "../ui/container-scroll-animation";
+import {
+  CardSkeletonContainer,
+  Card,
+  CardTitle,
+  CardDescription,
+  Skeleton,
+} from "../ui/ProductCard";
+import { services } from "@/data/GeneralData";
+import { servicesType } from "@/types/typeScriptTypes";
+import ShimmerBtn from "../buttons/shimmer-btn";
+import BorderMagicBtn from "../buttons/border-magic-btn";
+import { Button } from "../buttons/moving-border";
+import FigmaOutlineBtn from "../buttons/figmaOutlineBtn";
+import { cn } from "@/lib/utils";
 
 const features = [
   {
@@ -56,17 +74,48 @@ const features = [
 
 const Services = () => {
   return (
-    <div className="w-full flex flex-col justify-start items-center section">
-      <div className=" text-center px-6 max-w-2xl">
-        <h2 className="uppercase">We take care of it all!</h2>
-        <p className="text-lg italic">
-          From design to deployment, we handle it all to get your web and mobile
-          app launched and ready for action!
+    <div className="section relative flex w-full flex-col items-center justify-start bg-grid-small-white/[0.2]">
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+
+      <div className="z-10 max-w-2xl px-6 text-center">
+        <h2 className="flex items-center justify-center space-x-3 space-y-2 md:space-y-0 uppercase flex-wrap">
+          <span>Our</span>
+          <Cover className="flex items-center justify-center gap-x-2">
+            Superpowers{" "}
+            <IconBolt className="glow-texts inline-block h-10 w-10 animate-pulse text-white" />
+          </Cover>
+        </h2>
+        <p className="mt-4 text-lg italic">
+          Crafting sleek web apps, building seamless mobile experiences, and
+          creating smart AI chatbots to amplify your brand
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative z-10 py-8 max-w-7xl mx-auto px-5 lg:px-0">
-        {features.map((feature, index) => (
-          <FeaturedCard key={feature.title} {...feature} index={index} />
+      <div className="relative mt-2 z-10 mx-auto grid max-w-7xl grid-cols-1 items-stretch gap-10 md:gap-6 lg:gap-10 px-5 py-8 md:grid-cols-2 lg:grid-cols-2 lg:px-0">
+        {services.map((service: servicesType, index) => (
+          <Card key={service.id} className="flex flex-col">
+            <CardSkeletonContainer>
+              <Skeleton icons={service.icons} />
+            </CardSkeletonContainer>
+            <CardTitle>{service.title}</CardTitle>
+            <CardDescription className="mb-5">{service.description}</CardDescription>
+            <div className="mt-auto">
+              {/* <button className="py-2 px-5 border border-zinc-400 rounded-lg">
+                Select
+              </button> */}
+              <button
+                disabled={!service.isFuncional}
+                className={cn(
+                  "flex items-center justify-center relative rounded-lg bg-[#e6e5e5] px-8 py-2 font-light text-[#313131] shadow-[0_4px_14px_0_rgb(0,0,0,10%)] transition duration-200 ease-linear hover:shadow-[0_6px_20px_rgba(93,93,93,23%)]",
+                  "disabled:bg-[#5f5f5f] disabled:text-[#dfdede]",
+                )}
+              >
+                {service.isFuncional ? "Select" : "Coming Soon"}
+                <span
+                  className={`absolute top-1.5 left-2 h-2 w-2 rounded-full animate-pulse ${service.isFuncional ? "bg-green-500" : "bg-yellow-400"}`}
+                />
+              </button>
+            </div>
+          </Card>
         ))}
       </div>
     </div>

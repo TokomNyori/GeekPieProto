@@ -15,6 +15,12 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    'text-blue-500', // Add any classes that might be dynamically generated or conditionally used
+    'text-green-500',
+    'text-blue-400',
+    'text-orange-400',
+  ],
   theme: {
     extend: {
       backgroundImage: {
@@ -28,6 +34,7 @@ const config: Config = {
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         move: "move 5s linear infinite",
+        shimmer: "shimmer 2s linear infinite",
       },
       keyframes: {
         spotlight: {
@@ -63,6 +70,14 @@ const config: Config = {
           },
           to: {
             "background-position": "0% 0%",
+          },
+        },
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
           },
         },
       },

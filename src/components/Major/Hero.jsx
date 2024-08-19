@@ -1,13 +1,14 @@
 import Link from "next/link";
 import React from "react";
 import { Spotlight } from "../ui/Spotlight";
-import { Button } from "../ui/moving-border";
+import { Button } from "../buttons/moving-border";
 import dynamic from "next/dynamic";
 import { globeConfig, sampleArcs } from "@/data/globeData";
 import { StarsBackground } from "../ui/stars-background";
 import { ShootingStars } from "../ui/shooting-stars";
-import TailwindConnectBtn from "../ui/tailwindConnectBtn";
+import TailwindConnectBtn from "../buttons/tailwindConnectBtn";
 import { IconBrandReact, IconCode } from '@tabler/icons-react';
+import { HoverBorderGradient } from "@/components/buttons/hover-border-gradient";
 import localFont from "next/font/local";
 import clsx from "clsx";
 const formulaCondensed = localFont({
@@ -56,8 +57,8 @@ function Hero() {
         <h1 className={clsx(`font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 uppercase text-4xl md:leading-none md:text-[3.5rem] py-1`)}>
           Cutting-Edge Apps. <br /> Stunning Design.
         </h1>
-        <p className="mt-4 mb-4 font-normal text-base md:text-lg text-neutral-200 mx-auto lg:mx-0 max-w-lg">
-          We craft web and mobile apps that deliver real results and fuel your business growth. No Calls. No BS. Just Results.
+        <p className="mt-4 mb-5 font-normal text-base md:text-lg text-neutral-200 mx-auto lg:mx-0 max-w-lg">
+          We craft web and mobile apps that deliver real results. No Calls. No BS. Just Results.
         </p>
         <Link className="" href={"#"}>
           <Button className="">
@@ -71,7 +72,7 @@ function Hero() {
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
-      <div className="absolute z-30 bottom-3 lg:bottom-10 text-center mx-auto w-full text-neutral-300">
+      <div className="absolute z-30 bottom-2 lg:bottom-10 text-center mx-auto w-full text-neutral-300">
         Backed by
         <IconCode className="inline mx-1" stroke={1} />
         Computer Science
