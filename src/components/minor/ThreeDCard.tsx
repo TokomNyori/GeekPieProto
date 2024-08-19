@@ -34,11 +34,11 @@ function ThreeDCard({ title, image, link }: ThreeDCardProps) {
             src={`/projectDemos/${image}`}
             height="1000"
             width="1000"
-            className="h-72 w-full object-cover rounded-xl group-hover/card:shadow-xl object-top"
+            className="h-80 md:h-72 w-full object-cover rounded-xl group-hover/card:shadow-xl object-top"
             alt="thumbnail"
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-20">
+        <div className="flex justify-between items-center mt-10">
           {/* px-4 py-2 rounded-xl text-xs font-normal dark:text-white */}
           <CardItem
             translateZ={20}
