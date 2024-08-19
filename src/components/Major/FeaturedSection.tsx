@@ -20,9 +20,9 @@ import Image from "next/image";
 function FeaturedSection() {
   return (
     <div className="w-full flex flex-col justify-start items-center section">
-      <div className=" text-center px-6 max-w-2xl mb-10">
+      <div className="text-center px-6 max-w-2xl mb-10">
         <h2 className="uppercase">Why We’re Awesome!</h2>
-        <p className="text-lg italic">
+        <p className="text-lg italic mt-2">
           From industry-standard tech to top-notch support, we take care of
           everything, so you can sit back and watch your project come to life.
         </p>
