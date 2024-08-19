@@ -86,7 +86,7 @@ export const Skeleton = ({ icons }: SkeletonProps) => {
         <Container className="circle-5 h-8 w-8">{icons[4]?.icon}</Container>
       </div>
 
-      <div className="absolute top-5 z-40 m-auto h-40 w-px animate-move bg-gradient-to-b from-transparent via-cyan-500 to-transparent">
+      <div className="absolute top-8 md:top-5 z-40 m-auto h-40 w-px animate-move bg-gradient-to-b from-transparent via-cyan-500 to-transparent">
         <div className="absolute -left-10 top-1/2 h-32 w-10 -translate-y-1/2">
           <Sparkles />
         </div>
@@ -200,7 +200,7 @@ export const CardSkeletonContainer = ({
   return (
     <div
       className={cn(
-        "z-40 h-[12rem] rounded-xl md:h-[12rem]",
+        "z-40 h-[14rem] rounded-xl md:h-[12rem]",
         className,
         showGradient &&
           "bg-neutral-300 [mask-image:radial-gradient(50%_50%_at_50%_50%,white_0%,transparent_100%)] dark:bg-[rgba(40,40,40,0.70)]",
