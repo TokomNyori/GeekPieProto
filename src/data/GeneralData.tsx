@@ -21,10 +21,11 @@ import { partnersType, servicesType } from "@/types/typeScriptTypes";
 
 export const partners: partnersType[] = [
   {
-    partner: "FDigiTech",
-    image: "fdigitech.png",
-    width: 180,
-    height: 180,
+    partner: "Kardo Nyigyor",
+    image: "kardonyigyor.jpg",
+    width: 200,
+    height: 200,
+    description: "Deputy Speaker of Arunachal Pradesh Legislative Assembly",
   },
   {
     partner: "K3 Gas Service",
@@ -33,11 +34,10 @@ export const partners: partnersType[] = [
     height: 170,
   },
   {
-    partner: "Kardo Nyigyor",
-    image: "kardonyigyor.jpg",
-    width: 200,
-    height: 200,
-    description: "Deputy Speaker of Arunachal Pradesh Legislative Assembly",
+    partner: "FDigiTech",
+    image: "fdigitech.png",
+    width: 180,
+    height: 180,
   },
 ];
 

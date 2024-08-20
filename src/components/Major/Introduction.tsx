@@ -8,7 +8,7 @@ function Introduction() {
         While some may call us a software company, we prefer to think of
         ourselves as <Cover>problem solvers</Cover>
       </h1>
-      <p className="mt-2 italic text-neutral-400">First-principle thinking and thinking in inversion are our breakfast.</p>
+      {/* <p className="mt-2 italic text-neutral-400">First-principle thinking and thinking in inversion are our breakfast.</p> */}
     </div>
   );
 }

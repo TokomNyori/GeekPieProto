@@ -3,7 +3,7 @@ import { BsQuote } from "react-icons/bs";
 
 function About() {
   return (
-    <div className="section flex w-full flex-col items-center justify-center">
+    <div className="section pt-12 flex w-full flex-col items-center justify-center">
       <div className="max-w-3xl px-6 text-center tracking-wider">
         <h2 className="uppercase">Who’s Behind GeekPie?</h2>
         <p className="mt-5 text-base leading-relaxed">
