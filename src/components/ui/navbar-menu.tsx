@@ -72,9 +72,10 @@ export const Menu = ({
 }) => {
   return (
     <nav
+      aria-label="Main navigation"
       onMouseLeave={() => setActive(null)} // resets the state
       className={cn(
-        "shadow-input relative flex justify-center items-center space-x-4 rounded-full border border-transparent bg-white px-6 py-3 dark:border-white/[0.2] dark:bg-black md:py-4",
+        "shadow-input relative flex items-center justify-center space-x-4 rounded-full border border-transparent bg-white px-6 py-3 dark:border-white/[0.2] dark:bg-black md:py-4",
         className,
       )}
     >
