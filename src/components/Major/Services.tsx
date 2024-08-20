@@ -75,7 +75,7 @@ const features = [
 const Services = () => {
   return (
     <div className="section relative flex w-full flex-col items-center justify-start bg-grid-small-white/[0.2]">
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)] dark:bg-black"></div>
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_5%,black)] dark:bg-black"></div>
 
       <div className="z-10 max-w-2xl px-6 text-center">
         <h2 className="flex items-center justify-center gap-3 uppercase flex-wrap">

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { ContainerScroll } from "../ui/container-scroll-animation";
 import Image from "next/image";

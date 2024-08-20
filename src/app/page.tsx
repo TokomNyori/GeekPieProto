@@ -9,6 +9,7 @@ import FeaturedSection from "@/components/Major/FeaturedSection";
 import Partners from "@/components/Major/Partners";
 import Showcase from "@/components/Major/Showcase";
 import { BorderBeam } from "@/components/ui/border-beam";
+import About from "@/components/Major/About";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Partners />
       <Showcase/>
       <Services />
+      <About/>
     </main>
   );
 }
