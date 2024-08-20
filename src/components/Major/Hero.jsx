@@ -74,7 +74,7 @@ function Hero() {
       </div>
       <div className="absolute z-30 bottom-2 lg:bottom-10 text-center mx-auto w-full text-neutral-300">
         Backed by
-        <IconCode className="inline mx-1" stroke={1} />
+        <IconCode className="inline mx-1 animate-pulse text-white" stroke={1} />
         Computer Science
       </div>
     </div>

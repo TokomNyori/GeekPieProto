@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function AdvantageScroll() {
   return (
-    <div className="pb-2">
+    <div className="pb-2 overflow-hidden">
       <ContainerScroll
         titleComponent={
           <>
