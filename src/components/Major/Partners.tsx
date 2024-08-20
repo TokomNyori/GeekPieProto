@@ -6,27 +6,25 @@ import { div } from "three/webgpu";
 
 function Partners() {
   return (
-    <div className="section flex flex-col justify-center items-center w-full bg-dot-white/[0.2] relative">
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_5%,black)]"></div>
-      <h2 className="px-4 text-center z-10 uppercase">Our Power Partners</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 mt-10 items-center mx-auto z-10 px-4">
+    <div className="section relative flex w-full flex-col items-center justify-center bg-dot-white/[0.2]">
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_5%,black)] dark:bg-black"></div>
+      <h2 className="z-10 px-4 text-center uppercase">Our Power Partners</h2>
+      <div className="z-10 mt-10 grid grid-cols-1 items-center gap-10 px-4 md:px-6 md:grid-cols-3 md:gap-6">
         {partners.map((partner: partnersType, index) => {
           if (partner.description) {
             return (
               <div
                 key={index}
-                className="flex items-center justify-end space-x-3"
+                className="flex items-center justify-center space-x-3 w-fit mx-auto mt-0 md:mt-2"
               >
-                <div className="">
-                  <Image
-                    key={index}
-                    src={`/partners/${partner.image}`}
-                    alt={`"Partner - "${partner.partner}`}
-                    width={partner.width}
-                    height={partner.height}
-                    className="rounded-full w-24"
-                  />
-                </div>
+                <Image
+                  key={index}
+                  src={`/partners/${partner.image}`}
+                  alt={`"Partner - "${partner.partner}`}
+                  width={partner.width}
+                  height={partner.height}
+                  className="w-24 rounded-full"
+                />
                 <div className="flex flex-col bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent">
                   <text className="text-lg">Kardo Nyigyor</text>
                   <text className="text-sm italic">
@@ -39,14 +37,18 @@ function Partners() {
             );
           } else {
             return (
-              <Image
+              <div
                 key={index}
-                src={`/partners/${partner.image}`}
-                alt={`"Partner - "${partner.partner}`}
-                width={partner.width}
-                height={partner.height}
-                className="mx-auto"
-              />
+                className="flex items-center justify-center w-fit mx-auto"
+              >
+                <Image
+                  src={`/partners/${partner.image}`}
+                  alt={`"Partner - "${partner.partner}`}
+                  width={partner.width}
+                  height={partner.height}
+                  className=""
+                />
+              </div>
             );
           }
         })}
