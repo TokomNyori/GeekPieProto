@@ -21,18 +21,18 @@ function About() {
 
   useGSAP(() => {
     const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".line-svg-path",
-        start: "top bottom",
-        end: "bottom center",
-        scrub: true,
-      },
+      // scrollTrigger: {
+      //   trigger: ".line-svg-path",
+      //   start: "top bottom",
+      //   end: "bottom center",
+      //   scrub: true,
+      // },
     });
 
     const tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: ".box",
-        start: "top center+=150",
+        start: "top center+=200",
         end: "top center",
         scrub: true,
       },
@@ -63,7 +63,7 @@ function About() {
         duration: 2,
         scrollTrigger: {
           trigger: ".box2",
-          start: "top center+=150",
+          start: "top center+=200",
           end: "top center",
           scrub: true,
         },
@@ -77,7 +77,7 @@ function About() {
         duration: 2,
         scrollTrigger: {
           trigger: ".box3",
-          start: "top center+=150",
+          start: "top center+=200",
           end: "top center",
           scrub: true,
         },
