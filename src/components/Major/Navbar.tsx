@@ -45,9 +45,9 @@ function Navbar({ className }: { className?: string }) {
         className,
       )}
     >
-      <Menu setActive={setActive} className="flex justify-around">
+      <Menu setActive={setActive} className="flex justify-around md:justify-between">
         <div
-          className={`flex h-6 w-6 items-center justify-center rounded-full border bg-gradient-to-b from-neutral-200 to-neutral-400 bg-clip-text text-base tracking-wide text-transparent md:h-7 md:w-7 md:text-lg`}
+          className={`flex h-6 w-6 items-center justify-center rounded-full border bg-gradient-to-b from-neutral-200 to-neutral-400 bg-clip-text text-base tracking-wide text-transparent`}
         >
           G
         </div>

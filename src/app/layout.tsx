@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { GeistSans } from 'geist/font/sans';
+import { GeistSans } from "geist/font/sans";
+import "./globalsTwo.css";
 import "./globals.css";
 import Navbar from "@/components/Major/Navbar";
 import localFont from "next/font/local";
@@ -45,8 +46,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${GeistSans.className} dark`}>
-        <div className="relative w-full flex items-center justify-center">
-        <Navbar />
+        <div className="relative flex w-full items-center justify-center">
+          <Navbar />
         </div>
         {children}
       </body>
