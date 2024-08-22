@@ -52,7 +52,7 @@ export function SixBeamsAnimated() {
           <Circle ref={div2Ref}>
             <Icons.user />
           </Circle>
-          <Circle ref={div4Ref} className="size-16 text-3xl glow-texts bg-zinc-900">
+          <Circle ref={div4Ref} className="size-16 text-3xl glow-texts">
             G
           </Circle>
           <Circle ref={div6Ref}>

@@ -22,23 +22,8 @@ function About() {
   gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin, useGSAP);
 
   useGSAP(() => {
-    const tl = gsap.timeline({
-      // scrollTrigger: {
-      //   trigger: ".line-svg-path",
-      //   start: "top bottom",
-      //   end: "bottom center",
-      //   scrub: true,
-      // },
-    });
-
-    const tl2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".box",
-        start: "top center+=200",
-        end: "top center",
-        scrub: true,
-      },
-    });
+    const tl = gsap.timeline({});
+    const tl2 = gsap.timeline();
 
     tl.fromTo(
       ".line-svg-path",
@@ -46,6 +31,12 @@ function About() {
       {
         opacity: 1,
         duration: 5,
+        scrollTrigger: {
+          trigger: ".line-svg-path",
+          start: "top bottom-=200",
+          end: "top center",
+          scrub: true,
+        },
       },
     );
 
@@ -55,6 +46,12 @@ function About() {
       {
         opacity: 1,
         duration: 2,
+        scrollTrigger: {
+          trigger: ".box",
+          start: "top bottom-=200",
+          end: "top center",
+          scrub: true,
+        },
       },
     );
     tl2.fromTo(
@@ -65,7 +62,7 @@ function About() {
         duration: 2,
         scrollTrigger: {
           trigger: ".box2",
-          start: "top center+=200",
+          start: "top bottom-=200",
           end: "top center",
           scrub: true,
         },
@@ -79,7 +76,7 @@ function About() {
         duration: 2,
         scrollTrigger: {
           trigger: ".box3",
-          start: "top center+=200",
+          start: "top bottom-=200",
           end: "top center",
           scrub: true,
         },
@@ -93,8 +90,8 @@ function About() {
         duration: 2,
         scrollTrigger: {
           trigger: ".line-svg2",
-          start: "top center+=200",
-          end: "top center+=200",
+          start: "top bottom-=200",
+          end: "top bottom-=200",
           scrub: true,
         },
       },
@@ -118,9 +115,9 @@ function About() {
 
   return (
     <div className="section flex w-full flex-col items-center justify-center overflow-clip pt-12">
-      <div className="flex flex-col items-center justify-center gap-10 px-6 lg:max-w-4xl lg:flex-row xl:max-w-5xl">
+      <div className="flex flex-col items-center justify-center gap-10 px-6 md:max-w-2xl lg:max-w-4xl lg:flex-row xl:max-w-5xl">
         <div className="tracking-wider lg:w-3/5">
-          <h2 className="uppercase">Who’s Behind GeekPie?</h2>
+          <h2 className="uppercase text-center lg:text-start">Who’s Behind GeekPie?</h2>
           <p className="mt-5 text-base leading-relaxed">
             Hi! We’re a small team that loves solving problems with software.
             For years, we’ve been helping startups and small businesses build
@@ -283,7 +280,7 @@ function About() {
           </defs>
         </svg>
       </div>
-      <div className="freelance-box -mt-[12rem] w-full px-6 lg:max-w-4xl xl:max-w-5xl">
+      <div className="freelance-box -mt-[12rem] w-full px-6 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
         <div className="flex w-full flex-col items-center justify-center gap-10 lg:mt-10 lg:flex-row lg:gap-12">
           <div className="w-full bg-gradient-to-b from-neutral-200 to-neutral-300 bg-clip-text text-transparent lg:w-3/5">
             <h3 className="">Plus, Our Freelance Powerhouses</h3>
