@@ -106,7 +106,7 @@ function About() {
         scrollTrigger: {
           trigger: ".freelance-box",
           start: "top bottom-=200",
-          end: "top center",
+          end: "top center-=100",
           scrub: true,
         },
       },
@@ -117,7 +117,9 @@ function About() {
     <div className="section flex w-full flex-col items-center justify-center overflow-clip pt-12">
       <div className="flex flex-col items-center justify-center gap-10 px-6 md:max-w-2xl lg:max-w-4xl lg:flex-row xl:max-w-5xl">
         <div className="tracking-wider lg:w-3/5">
-          <h2 className="uppercase text-center lg:text-start">Who’s Behind GeekPie?</h2>
+          <h2 className="text-center uppercase lg:text-start">
+            Who’s Behind GeekPie?
+          </h2>
           <p className="mt-5 text-base leading-relaxed">
             Hi! We’re a small team that loves solving problems with software.
             For years, we’ve been helping startups and small businesses build
