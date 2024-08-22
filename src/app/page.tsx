@@ -23,6 +23,7 @@ export default function Home() {
       <Showcase/>
       <Services />
       <About/>
+      <div className="h-96"></div>
     </main>
   );
 }
