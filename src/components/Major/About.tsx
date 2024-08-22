@@ -12,6 +12,8 @@ import {
 } from "gsap/all";
 
 import { IconUserCheck, IconBolt, IconSchool } from "@tabler/icons-react";
+import ShineBorder from "../ui/shine-border";
+import { SixBeamsAnimated } from "../minor/six-beams-animated";
 
 function About() {
   const svgRef = useRef(null);
@@ -83,39 +85,63 @@ function About() {
         },
       },
     );
+    tl2.fromTo(
+      ".line-svg2",
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 2,
+        scrollTrigger: {
+          trigger: ".line-svg2",
+          start: "top center+=200",
+          end: "top center+=200",
+          scrub: true,
+        },
+      },
+    );
   });
 
   return (
     <div className="section flex w-full flex-col items-center justify-center overflow-clip pt-12">
-      <div className="max-w-3xl px-6 text-center tracking-wider">
-        <h2 className="uppercase">Who’s Behind GeekPie?</h2>
-        <p className="mt-5 text-base leading-relaxed">
-          Hi! We’re <span className="bg-zinc-800 p-1">GeekPie</span>, a small
-          team that loves solving problems with software. For years, we’ve been
-          helping startups and small businesses build and grow their web apps.
-          People might call us a{" "}
-          <span className="bg-zinc-800 p-1">
-            &ldquo;software company&ldquo;
+      <div className="flex flex-col items-center justify-center gap-10 px-6 lg:max-w-4xl lg:flex-row xl:max-w-5xl">
+        <div className="tracking-wider lg:w-3/5">
+          <h2 className="uppercase">Who’s Behind GeekPie?</h2>
+          <p className="mt-5 text-base leading-relaxed">
+            Hi! We’re a small team that loves solving problems with software.
+            For years, we’ve been helping startups and small businesses build
+            and grow their web apps. People might call us a{" "}
+            <span className="bg-zinc-800 p-1">
+              &ldquo;software company&ldquo;
+            </span>
+            , but we like to think of ourselves as problem solvers.{" "}
+            <q className="bg-zinc-800 p-1 italic leading-loose">
+              First-principle thinking and thinking in inversion are our
+              breakfast
+            </q>
+            . <br />
+            We started GeekPie to help businesses create a strong online
+            presence with unique web apps that stand out and scale up. Plus, we
+            share web development tips—and a bit of fun—on{" "}
+            <Link
+              href={`https://www.instagram.com/geekpie.in/`}
+              target="_blank"
+              className="bg-zinc-800 p-1"
+            >
+              Instagram
+            </Link>
+            .
+          </p>
+        </div>
+        <ShineBorder
+          className="bg-background relative flex h-[25rem] w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl lg:h-[23rem] lg:w-2/5"
+          color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+        >
+          <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+            GeekPie
           </span>
-          , but we like to think of ourselves as problem solvers.{" "}
-          <q className="bg-blue-800 p-1 italic leading-loose">
-            First-principle thinking and thinking in inversion are our breakfast
-          </q>
-          . <br />
-          We started GeekPie to help businesses create a strong online presence
-          with unique web apps that stand out and scale up. Plus, we share web
-          development tips—and a bit of fun—on{" "}
-          <Link
-            href={`https://www.instagram.com/geekpie.in/`}
-            target="_blank"
-            className="bg-zinc-800 p-1"
-          >
-            Instagram
-          </Link>
-          .
-        </p>
+        </ShineBorder>
       </div>
-      <div className="relative mb-[25rem] mt-16 flex flex-col items-center justify-center py-20">
+      <div className="relative -z-10 mt-16 flex flex-col items-center justify-center pt-20">
         <div className="box absolute left-[14.3rem] top-3 flex items-start justify-start space-x-2 rounded-full">
           <div className="w-24">
             <Image
@@ -219,6 +245,48 @@ function About() {
             </linearGradient>
           </defs>
         </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 800 400"
+          className="line-svg2 mr-40 mt-16"
+        >
+          <path
+            d="M379.82061767578125,8.968609809875488C379.9700978597005,11.509715874989828,380.5680185953776,18.983556906382244,380.7174987792969,24.215246200561523C380.8669789632161,29.446935494740803,380.7174987792969,35.276533444722496,380.7174987792969,40.35874557495117C380.7174987792969,45.44095770517985,380.5680236816406,49.92526054382324,380.7174987792969,54.708518981933594C380.8669738769531,59.491777420043945,381.4648742675781,64.72346750895183,381.6143493652344,69.05829620361328C381.7638244628906,73.39312489827473,381.6143493652344,76.53214009602864,381.6143493652344,80.71749114990234C381.6143493652344,84.90284220377605,381.6143493652344,89.387144724528,381.6143493652344,94.17040252685547C381.6143493652344,98.95366032918294,387.1449940999349,113.30343500773112,381.6143493652344,109.41703796386719C376.0837046305339,105.53064092000325,352.91478474934894,75.03737131754558,348.43048095703125,70.85202026367188C343.94617716471356,66.66666920979817,352.6158498128255,80.71748860677083,354.7085266113281,84.304931640625C356.80120340983075,87.89237467447917,358.29595947265625,88.93871180216472,360.9865417480469,92.37667846679688C363.6771240234375,95.81464513142903,365.9192860921224,102.69057846069336,370.8520202636719,104.93273162841797C375.7847544352214,107.17488479614258,386.2481180826823,107.62331899007161,390.58294677734375,105.82959747314453C394.9177754720052,104.03587595621745,394.91779073079425,97.75784683227539,396.8609924316406,94.17040252685547C398.804194132487,90.58295822143555,400.59791056315106,87.44394429524739,402.2421569824219,84.304931640625C403.8864034016927,81.16591898600261,405.23170471191406,77.7279561360677,406.7264709472656,75.3363265991211C408.2212371826172,72.94469706217448,410.463373819987,70.85201644897461,411.21075439453125,69.95515441894531"
+            fill="none"
+            stroke-width="5"
+            stroke="hsl(0, 0%, 80%)"
+            stroke-linecap="round"
+            stroke-dasharray="10 7"
+          ></path>
+          <defs>
+            <linearGradient id="SvgjsLinearGradient1001">
+              <stop stop-color="hsl(37, 99%, 67%)" offset="0"></stop>
+              <stop stop-color="hsl(316, 73%, 52%)" offset="1"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div className="-mt-[12rem] w-full px-6 lg:max-w-4xl xl:max-w-5xl">
+        <div className="flex w-full flex-col items-center justify-center gap-10 lg:mt-10 lg:flex-row lg:gap-12">
+          <div className="w-full lg:w-3/5 bg-gradient-to-b from-neutral-200 to-neutral-300 text-transparent bg-clip-text">
+            <h3 className="">
+              Plus, Our Freelance Powerhouses
+            </h3>
+            <p className="mt-6">
+              We also collaborate with exceptionally talented freelancers who
+              bring unique skills to our projects when we need to expand our
+              external team. We carefully handpick and verify each freelancer
+              before they become part of our team. Once they qualify, they join
+              us as official freelance partners, ready to jump in when the
+              project requires their expertise.
+            </p>
+          </div>
+          <div className="w-full lg:w-2/5">
+            <SixBeamsAnimated />
+          </div>
+        </div>
       </div>
     </div>
   );
