@@ -99,6 +99,21 @@ function About() {
         },
       },
     );
+
+    tl2.fromTo(
+      ".freelance-box",
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 2,
+        scrollTrigger: {
+          trigger: ".freelance-box",
+          start: "top bottom-=200",
+          end: "top center",
+          scrub: true,
+        },
+      },
+    );
   });
 
   return (
@@ -133,7 +148,7 @@ function About() {
           </p>
         </div>
         <ShineBorder
-          className="bg-background relative flex h-[25rem] w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl lg:h-[23rem] lg:w-2/5"
+          className="bg-background relative flex h-[26rem] w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl lg:h-[23rem] lg:w-2/5"
           color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
         >
           <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
@@ -268,12 +283,10 @@ function About() {
           </defs>
         </svg>
       </div>
-      <div className="-mt-[12rem] w-full px-6 lg:max-w-4xl xl:max-w-5xl">
+      <div className="freelance-box -mt-[12rem] w-full px-6 lg:max-w-4xl xl:max-w-5xl">
         <div className="flex w-full flex-col items-center justify-center gap-10 lg:mt-10 lg:flex-row lg:gap-12">
-          <div className="w-full lg:w-3/5 bg-gradient-to-b from-neutral-200 to-neutral-300 text-transparent bg-clip-text">
-            <h3 className="">
-              Plus, Our Freelance Powerhouses
-            </h3>
+          <div className="w-full bg-gradient-to-b from-neutral-200 to-neutral-300 bg-clip-text text-transparent lg:w-3/5">
+            <h3 className="">Plus, Our Freelance Powerhouses</h3>
             <p className="mt-6">
               We also collaborate with exceptionally talented freelancers who
               bring unique skills to our projects when we need to expand our
