@@ -48,7 +48,7 @@ function About() {
         duration: 2,
         scrollTrigger: {
           trigger: ".box",
-          start: "top bottom-=200",
+          start: "top bottom-=150",
           end: "top center",
           scrub: true,
         },
