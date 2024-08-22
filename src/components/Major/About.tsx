@@ -90,8 +90,8 @@ function About() {
         duration: 2,
         scrollTrigger: {
           trigger: ".line-svg2",
-          start: "top bottom-=200",
-          end: "top bottom-=200",
+          start: "top bottom-=220",
+          end: "top bottom-=220",
           scrub: true,
         },
       },
