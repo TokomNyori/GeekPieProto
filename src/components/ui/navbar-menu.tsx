@@ -75,7 +75,7 @@ export const Menu = ({
       aria-label="Main navigation"
       onMouseLeave={() => setActive(null)} // resets the state
       className={cn(
-        "shadow-input relative flex items-center justify-center space-x-4 rounded-full border border-transparent bg-white px-6 py-3 dark:border-white/[0.2] dark:bg-black md:py-4",
+        "shadow-input relative flex items-center justify-center space-x-4 rounded-full border border-transparent bg-white px-3 py-3 dark:border-white/[0.2] dark:bg-black md:py-3",
         className,
       )}
     >
@@ -116,11 +116,11 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({ children, className, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 hover:text-black dark:text-neutral-200"
+      className={cn("text-neutral-700 hover:text-black dark:text-neutral-200", className)}
     >
       {children}
     </Link>

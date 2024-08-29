@@ -23,6 +23,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "minxl": "1080px",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

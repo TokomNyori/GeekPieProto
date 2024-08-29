@@ -4,6 +4,7 @@ import React, { forwardRef, useRef } from "react";
 
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
+import Image from "next/image";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -53,7 +54,7 @@ export function SixBeamsAnimated() {
             <Icons.user />
           </Circle>
           <Circle ref={div4Ref} className="size-16 text-3xl glow-texts">
-            G
+            <Image src={`/2.png`} height={200} width={200} alt="geekpie logo" />
           </Circle>
           <Circle ref={div6Ref}>
             <Icons.user />

@@ -32,6 +32,52 @@ const formulaCondensed = localFont({
   ],
   display: "swap",
 });
+const proxmaNova = localFont({
+  src: [
+    {
+      path: "../assets/fonts/proxima-nova/ProximaNovaBold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/proxima-nova/ProximaNovaBoldItalic.otf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "../assets/fonts/proxima-nova/ProximaNovaSemibold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/proxima-nova/ProximaNovaSemiboldItalic.otf",
+      weight: "600",
+      style: "italic",
+    },
+    {
+      path: "../assets/fonts/proxima-nova/ProximaNovaRegular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/proxima-nova/ProximaNovaRegularItalic.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../assets/fonts/proxima-nova/ProximaNovaLight.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/proxima-nova/ProximaNovaLightItalic.otf",
+      weight: "300",
+      style: "italic",
+    },
+  ],
+  display: "swap",
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",

@@ -5,7 +5,6 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import {
-  DrawSVGPlugin,
   GSDevTools,
   MotionPathPlugin,
   ScrollTrigger,
@@ -19,7 +18,7 @@ function About() {
   const svgRef = useRef(null);
   const teamMembers = [1, 2, 3, 4];
 
-  gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin, useGSAP);
+  gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, useGSAP);
 
   useGSAP(() => {
     const tl = gsap.timeline({});

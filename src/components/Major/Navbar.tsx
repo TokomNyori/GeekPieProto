@@ -8,8 +8,9 @@ import {
 } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { IconUserCircle } from "@tabler/icons-react";
+import { IconUserCircle, IconMenu2 } from "@tabler/icons-react";
 import localFont from "next/font/local";
+import Image from "next/image";
 const formulaCondensed = localFont({
   src: [
     {
@@ -47,13 +48,13 @@ function Navbar({ className }: { className?: string }) {
     >
       <Menu setActive={setActive} className="flex justify-between">
         <div
-          className={`flex h-6 w-6 items-center justify-center rounded-full border bg-gradient-to-b from-neutral-200 to-neutral-400 bg-clip-text text-base tracking-wide text-transparent`}
+          className={`flex h-8 w-8 items-center justify-center rounded-full border bg-gradient-to-b from-neutral-200 to-neutral-400 bg-clip-text text-base tracking-wide text-transparent`}
         >
-          G
+          <Image src={`/1.png`} height={100} width={100} alt="geekpie logo" />
         </div>
         <div className="shadow-input relative flex justify-center space-x-4">
-          <HoveredLink href="/">Home</HoveredLink>
-          <MenuItem setActive={setActive} active={active} item="Shop">
+          <HoveredLink className="hidden md:block" href="/">Home</HoveredLink>
+          <MenuItem setActive={setActive} active={active} item="Services">
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink href="#">All the BSs</HoveredLink>
               <HoveredLink href="#">Shhhhhh...</HoveredLink>
@@ -64,8 +65,9 @@ function Navbar({ className }: { className?: string }) {
           </MenuItem>
           <HoveredLink href="#">Contact</HoveredLink>
         </div>
-        <div>
+        <div className="flex items-center space-x-0.5 rounded-full border  pr-1.5">
           <IconUserCircle className="h-7 w-7" />
+          <IconMenu2 className="h-6 w-6" />
         </div>
       </Menu>
     </div>
