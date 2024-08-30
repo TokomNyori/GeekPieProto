@@ -51,7 +51,7 @@ function Navbar({ className }: { className?: string }) {
       const currentScrollY = window.scrollY;
 
       // Determine scroll direction
-      if (currentScrollY > lastScrollY && lastScrollY > 220) {
+      if (currentScrollY > lastScrollY && lastScrollY > 200) {
         // Scrolling down - hide the navbar
         gsap.to(".main-navbar", { y: "-100%", opacity: 0, duration: 0.5 });
       } else {
