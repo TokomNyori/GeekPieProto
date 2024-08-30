@@ -9,6 +9,9 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { IconUserCircle, IconMenu2 } from "@tabler/icons-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useGSAP } from "@gsap/react";
 import localFont from "next/font/local";
 import Image from "next/image";
 const formulaCondensed = localFont({
@@ -39,10 +42,43 @@ const formulaCondensed = localFont({
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+  gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+  useGSAP(() => {
+    let lastScrollY = 0;
+
+    const toggleNavbar = () => {
+      const currentScrollY = window.scrollY;
+
+      // Determine scroll direction
+      if (currentScrollY > lastScrollY && lastScrollY > 256) {
+        // Scrolling down - hide the navbar
+        gsap.to(".main-navbar", { y: "-100%", opacity: 0, duration: 0.5 });
+      } else {
+        // Scrolling up - show the navbar
+        gsap.to(".main-navbar", { y: "0%", opacity: 1, duration: 0.5 });
+      }
+
+      // Update the last scroll position
+      lastScrollY = currentScrollY;
+      console.log("Scrolls:");
+      console.log("CurrentScrolls:", currentScrollY);
+      console.log("LastScrolls:", lastScrollY);
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", toggleNavbar);
+
+    // Cleanup the scroll event listener
+    return () => {
+      window.removeEventListener("scroll", toggleNavbar);
+    };
+  });
+
   return (
     <div
       className={cn(
-        "fixed inset-x-0 top-3 z-50 mx-auto max-w-2xl px-4 md:px-0",
+        "main-navbar fixed inset-x-0 top-3 z-50 mx-auto max-w-2xl px-4 md:px-0",
         className,
       )}
     >
@@ -53,7 +89,9 @@ function Navbar({ className }: { className?: string }) {
           <Image src={`/1.png`} height={100} width={100} alt="geekpie logo" />
         </div>
         <div className="shadow-input relative flex justify-center space-x-4">
-          <HoveredLink className="hidden md:block" href="/">Home</HoveredLink>
+          <HoveredLink className="hidden md:block" href="/">
+            Home
+          </HoveredLink>
           <MenuItem setActive={setActive} active={active} item="Services">
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink href="#">All the BSs</HoveredLink>
@@ -65,7 +103,7 @@ function Navbar({ className }: { className?: string }) {
           </MenuItem>
           <HoveredLink href="#">Contact</HoveredLink>
         </div>
-        <div className="flex items-center space-x-0.5 rounded-full border  pr-1.5">
+        <div className="flex items-center space-x-0.5 rounded-full border pr-1.5">
           <IconUserCircle className="h-7 w-7" />
           <IconMenu2 className="h-6 w-6" />
         </div>

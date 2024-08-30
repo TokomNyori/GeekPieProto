@@ -166,7 +166,7 @@ function About() {
             />
           </div>
           <div className="flex flex-col items-start justify-start">
-            <p className="ml-1 text-lg">Tokom Nyori</p>
+            <p className="ml-1 text-lg">Tokom Nyori <span className="text-xs">(Ind)</span></p>
             <div className="flex flex-col space-y-0.5 text-sm">
               <p className="flex items-center gap-x-1">
                 <IconUserCheck className="h-5 w-5" /> Self-taught Software
