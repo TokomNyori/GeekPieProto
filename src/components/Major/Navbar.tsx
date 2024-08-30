@@ -104,8 +104,8 @@ function Navbar({ className }: { className?: string }) {
           <HoveredLink href="#">Contact</HoveredLink>
         </div>
         <div className="flex items-center space-x-0.5 rounded-full border pr-1.5">
-          <IconUserCircle className="h-7 w-7" />
-          <IconMenu2 className="h-6 w-6" />
+          <IconUserCircle className="h-[1.8rem] w-[1.8rem]" />
+          <IconMenu2 className="h-7 w-7" />
         </div>
       </Menu>
     </div>
