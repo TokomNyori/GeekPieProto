@@ -18,7 +18,7 @@ function AdvantageScroll() {
         }
       >
         <Image
-          src={`/test2.png`}
+          src={`/ipad-image.png`}
           alt="hero"
           height={720}
           width={1400}

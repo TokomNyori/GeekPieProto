@@ -21,6 +21,13 @@ export type partnersType = {
     description?: string,
 }
 
+export type brandsLogoType = {
+    brand: string;
+    image: string;
+    key : string | number;
+    className?: string;
+}
+
 
 export type servicesType = {
     id: number,

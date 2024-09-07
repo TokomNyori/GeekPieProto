@@ -20,6 +20,7 @@ const config: Config = {
     'text-green-500',
     'text-blue-400',
     'text-orange-400',
+    'md:hidden',
   ],
   theme: {
     extend: {
