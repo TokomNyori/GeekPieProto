@@ -29,7 +29,7 @@ function FeaturedSection() {
           everything, so you can sit back and watch your project come to life.
         </p>
       </div>
-      <BentoGrid className="mx-auto mb-14 max-w-4xl px-4 md:auto-rows-[20rem]">
+      <BentoGrid className="mx-auto mb-16 max-w-4xl px-4 md:auto-rows-[20rem]">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
