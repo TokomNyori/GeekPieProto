@@ -107,9 +107,7 @@ function Hero() {
           We craft web and mobile apps that deliver real results and help your
           business grow. No Chatter. No BS. Just Results.
         </p>
-        <Link className="" href={"#"}>
-          <Button className="">Chat GeekPIe AI</Button>
-        </Link>
+        <Button className="">Chat GeekPIe AI</Button>
 
         <div className="mt-10 animate-pulse text-neutral-300 minxl:hidden">
           Backed by
