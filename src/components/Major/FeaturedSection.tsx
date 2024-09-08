@@ -48,7 +48,7 @@ function FeaturedSection() {
           and apps of companies like Netflix, Spotify, Twitch, and more—bringing
           the industry’s best to your projects.
         </p>
-        <div className="mx-auto mt-10 grid grid-cols-3 items-center justify-center gap-6 md:grid-cols-4">
+        <div className="relative mx-auto mt-10 grid grid-cols-3 items-center justify-center gap-6 md:grid-cols-4">
           {brandLogos.map((brand, index) => (
             <BrandLogoContainer
               image={brand.image}
@@ -57,6 +57,7 @@ function FeaturedSection() {
               className={brand.className}
             />
           ))}
+          <div className="glow absolute -z-10 aspect-square inset-0 h-[95%] w-full max-w-xl rounded-full bg-blue-400/25 blur-3xl filter" />
         </div>
       </div>
     </div>
