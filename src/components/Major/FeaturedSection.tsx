@@ -57,7 +57,7 @@ function FeaturedSection() {
               className={brand.className}
             />
           ))}
-          <div className="glow absolute -z-10 aspect-square inset-0 h-[95%] w-full max-w-xl rounded-full bg-blue-400/25 blur-3xl filter" />
+          <div className="glow absolute inset-0 -z-10 aspect-square h-[90%] w-full max-w-xl rounded-full bg-blue-400/25 blur-3xl filter" />
         </div>
       </div>
     </div>
