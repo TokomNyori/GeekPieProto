@@ -43,11 +43,11 @@ function FeaturedSection() {
       </BentoGrid>
 
       <div className="max-w-2xl px-6 text-center">
-        <h5>
+        <p>
           We use the same technologies and tech stacks that power the websites
           and apps of companies like Netflix, Spotify, Twitch, and more—bringing
           the industry’s best to your projects.
-        </h5>
+        </p>
         <div className="mx-auto mt-10 grid grid-cols-3 items-center justify-center gap-6 md:grid-cols-4">
           {brandLogos.map((brand, index) => (
             <BrandLogoContainer

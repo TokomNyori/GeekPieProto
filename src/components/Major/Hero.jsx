@@ -110,12 +110,18 @@ function Hero() {
         <Link className="" href={"#"}>
           <Button className="">Chat GeekPIe AI</Button>
         </Link>
+
+        <div className="mt-20 animate-pulse text-neutral-300 minxl:hidden">
+          Backed by
+          <IconCode className="mx-1 inline text-white" stroke={1} />
+          Computer Science
+        </div>
       </div>
       <div className="relative mt-14 flex h-80 w-full items-start justify-center md:mt-0 md:h-[36rem] minxl:h-[100%]">
         <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex h-40 w-full select-none items-center justify-center bg-gradient-to-b from-transparent to-white dark:to-black">
           <p
             className={cn(
-              "bg-gradient-to-b from-neutral-300 to-neutral-500 bg-clip-text capitalize text-sm text-transparent animate-pulse",
+              "animate-pulse bg-gradient-to-b from-neutral-300 to-neutral-500 bg-clip-text text-sm capitalize text-transparent",
               proximaNovaCondensedBold.className,
             )}
           >
@@ -126,7 +132,7 @@ function Hero() {
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
-      <div className="absolute bottom-2 z-30 mx-auto w-full text-center text-neutral-300 minxl:bottom-10">
+      <div className="absolute bottom-10 z-30 mx-auto hidden w-full text-center text-neutral-300 minxl:block">
         Backed by
         <IconCode className="mx-1 inline text-white" stroke={1} />
         Computer Science

@@ -3,8 +3,8 @@ import { Cover } from "@/components/ui/cover";
 
 function Introduction() {
   return (
-    <div className="w-full px-6 max-w-4xl mx-auto py-10 text-center">
-      <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold max-w-7xl mx-auto mt-6 relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+    <div className="mx-auto w-full max-w-4xl px-6 pb-10 pt-3 text-center minxl:pt-10">
+      <h1 className="relative z-20 mx-auto mt-6 max-w-7xl bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 bg-clip-text text-xl font-semibold text-transparent dark:from-neutral-800 dark:via-white dark:to-white md:text-2xl lg:text-3xl">
         While some may call us a software company, we prefer to think of
         ourselves as <Cover>problem solvers</Cover>
       </h1>
