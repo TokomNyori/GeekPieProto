@@ -111,7 +111,7 @@ function Hero() {
           <Button className="">Chat GeekPIe AI</Button>
         </Link>
 
-        <div className="mt-20 animate-pulse text-neutral-300 minxl:hidden">
+        <div className="mt-10 animate-pulse text-neutral-300 minxl:hidden">
           Backed by
           <IconCode className="mx-1 inline text-white" stroke={1} />
           Computer Science
