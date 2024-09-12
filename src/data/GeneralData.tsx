@@ -49,7 +49,7 @@ export const brandLogos: brandsLogoType[] = [
   {
     key: "brand logo 1",
     brand: "netflix",
-    image: "netflix.png",
+    image: "netflixN.png",
   },
   {
     key: "brand logo 2",
