@@ -12,7 +12,7 @@ function BrandLogoContainer({ image, brand, key, className }: brandsLogoType) {
       )}
       key={key}
     >
-      <div className="flex aspect-square h-16 w-16 items-center justify-center rounded-xl bg-white/10 p-2.5 backdrop-blur-3xl md:bg-white/10">
+      <div className="flex aspect-square animate-pulse h-16 w-16 items-center justify-center rounded-xl bg-white/10 p-2.5 backdrop-blur-3xl">
         <Image
           src={`/brandLogos/${image}`}
           width={200}

@@ -92,7 +92,7 @@ function Hero() {
         <TailwindConnectBtn text="Introducing GeekPie" className="mb-4" />
         <h1
           className={cn(
-            `bg-gradient-to-b from-neutral-50 to-neutral-500 bg-clip-text py-1 text-4xl font-bold uppercase text-transparent md:text-[3.5rem] md:leading-none`,
+            `bg-gradient-to-b from-yellow-50 to-neutral-500 bg-clip-text py-1 text-4xl font-bold uppercase text-transparent md:text-[3.5rem] md:leading-none`,
             proxmaNova.className,
           )}
         >
