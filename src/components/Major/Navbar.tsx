@@ -116,7 +116,7 @@ function Navbar({ className }: { className?: string }) {
           <IconMenu2 className="h-[1.7rem] w-[1.7rem]" />
           <Modal
             title="Choose Your Path"
-            trigger={<IconUserCircle className="h-7 w-7" />}
+            trigger={<IconUserCircle className="h-8 w-8" />}
             className="min-w-[90%] max-w-[95%] px-6 minxl:min-w-[40%]"
           >
             <Accountype />

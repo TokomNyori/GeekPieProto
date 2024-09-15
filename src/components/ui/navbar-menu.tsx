@@ -75,7 +75,7 @@ export const Menu = ({
       aria-label="Main navigation"
       onMouseLeave={() => setActive(null)} // resets the state
       className={cn(
-        "shadow-input relative flex items-center justify-center space-x-4 rounded-full border border-transparent bg-white px-3 py-2 dark:border-white/[0.2] dark:bg-black md:py-2",
+        "shadow-input relative flex items-center justify-center space-x-4 rounded-full border border-transparent bg-white px-3 py-2.5 dark:border-white/[0.2] dark:bg-black md:py-2",
         className,
       )}
     >
@@ -120,7 +120,10 @@ export const HoveredLink = ({ children, className, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className={cn("text-neutral-700 hover:text-black dark:text-neutral-200", className)}
+      className={cn(
+        "text-neutral-700 hover:text-black dark:text-neutral-200",
+        className,
+      )}
     >
       {children}
     </Link>
