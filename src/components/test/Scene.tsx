@@ -36,7 +36,7 @@ const Scene = () => {
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
       <OrbitControls enableZoom={false} enableRotate={true} autoRotate={true} />
-      <Environment preset="sunset" environmentIntensity={0.4} />
+      <Environment preset="sunset" environmentIntensity={0.5} />
       <Suspense fallback={<Progressive />}>
         <Model />
       </Suspense>
