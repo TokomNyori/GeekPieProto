@@ -2,8 +2,7 @@
 import { useAnimations, useGLTF, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
-import { Group, Mesh, MeshPhysicalMaterial, SRGBColorSpace } from "three";
-import { EarthMaterial } from "./EarthMaterial ";
+import { Group, Mesh, SRGBColorSpace } from "three";
 
 useGLTF.preload("earth_night.glb");
 
