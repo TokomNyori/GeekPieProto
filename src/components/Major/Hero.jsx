@@ -126,7 +126,7 @@ function Hero() {
             We work globally
           </p>
         </div>
-        <div className="absolute bottom-0 z-10 h-80 w-full p-0 md:h-[95%] md:w-[95%] minxl:bottom-2 minxl:h-[95%] minxl:w-[95%]">
+        <div className="absolute bottom-0 z-10 h-[21rem] w-full p-0 md:h-[95%] md:w-[95%] minxl:bottom-2 minxl:h-[95%] minxl:w-[95%]">
           {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
           <Scene />
         </div>
