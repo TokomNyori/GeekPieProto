@@ -83,10 +83,10 @@ function Hero() {
     <div className="minxl:py:0 relative flex h-auto w-full flex-col-reverse items-center justify-between overflow-hidden rounded-md py-10 minxl:h-screen minxl:flex-row minxl:items-center minxl:justify-between">
       <ShootingStars />
       <StarsBackground />
-      {/* <Spotlight
-        className="-top-10 left-0 minxl:-top-20 minxl:left-0"
-        fill="white"
-      /> */}
+      <Spotlight
+        className="-top-24 left-0 minxl:-top-20 minxl:left-[32rem]"
+        fill="#ffd590"
+      />
       {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_-75%,black)]"></div> */}
       <div className="relative z-10 mt-2 w-full p-4 px-6 text-center minxl:ml-10 minxl:mt-0 minxl:px-8 minxl:text-start">
         <TailwindConnectBtn text="Introducing GeekPie" className="mb-4" />
