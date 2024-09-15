@@ -8,12 +8,21 @@ import {
 } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { IconUserCircle, IconMenu2 } from "@tabler/icons-react";
+import {
+  IconUserCircle,
+  IconMenu2,
+  IconBulb,
+  IconBrush,
+  IconSparkles,
+  IconRocket,
+  IconSeeding,
+} from "@tabler/icons-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import localFont from "next/font/local";
 import Image from "next/image";
+import Modal from "../modals/Modal";
 const formulaCondensed = localFont({
   src: [
     {
@@ -103,9 +112,15 @@ function Navbar({ className }: { className?: string }) {
           </MenuItem>
           <HoveredLink href="#">Contact</HoveredLink>
         </div>
-        <div className="flex cursor-pointer items-center space-x-0.5 rounded-full border pr-1.5">
-          <IconUserCircle className="h-7 w-7" />
-          <IconMenu2 className="h-[1.6rem] w-[1.6rem]" />
+        <div className="flex cursor-pointer items-center space-x-1 rounded-full">
+          <IconMenu2 className="h-[1.7rem] w-[1.7rem]" />
+          <Modal
+            title="Choose Your Path"
+            trigger={<IconUserCircle className="h-7 w-7" />}
+            className="min-w-[90%] max-w-[95%] px-6 minxl:min-w-[40%]"
+          >
+            <Accountype />
+          </Modal>
         </div>
       </Menu>
     </div>
@@ -113,3 +128,25 @@ function Navbar({ className }: { className?: string }) {
 }
 
 export default Navbar;
+
+export const Accountype = () => {
+  return (
+    <div className="mt-8 grid w-full grid-cols-1 gap-10 minxl:grid-cols-3">
+      <button className="flex min-h-24 w-auto flex-col items-center justify-center rounded-xl border border-zinc-800 p-4 transition-colors duration-200 ease-in-out hover:bg-zinc-900">
+        <IconRocket className="mb-2" />
+        <span className="font-semibold">Visionary</span>
+        <span className="text-sm">(Client)</span>
+      </button>
+      <button className="flex min-h-24 w-auto flex-col items-center justify-center rounded-xl border border-zinc-800 p-4 transition-colors duration-200 ease-in-out hover:bg-zinc-900">
+        <IconSparkles className="mb-2" />
+        <span className="font-semibold">Creator</span>
+        <span className="text-sm">(Freelance Partner)</span>
+      </button>
+      <button className="flex min-h-24 w-auto flex-col items-center justify-center rounded-xl border border-zinc-800 p-4 transition-colors duration-200 ease-in-out hover:bg-zinc-900">
+        <IconSeeding className="mb-2" />
+        <span className="font-semibold">Ambassador</span>
+        <span className="text-sm">(Referral Partner)</span>
+      </button>
+    </div>
+  );
+};

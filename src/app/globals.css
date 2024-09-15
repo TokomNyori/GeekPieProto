@@ -8,6 +8,12 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 @layer base {
   body {
     @apply bg-black text-gray-200;
@@ -31,6 +37,10 @@
 
   h5 {
     @apply text-lg lg:text-xl;
+  }
+
+  h6 {
+    @apply text-lg;
   }
 
   .section {
@@ -61,6 +71,14 @@
     100% {
       @apply text-red-400;
     }
+  }
+
+  .modal-bg-z-index {
+    z-index: 999;
+  }
+
+  .modal-z-index {
+    z-index: 1000;
   }
 }
 

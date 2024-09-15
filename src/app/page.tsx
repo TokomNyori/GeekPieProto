@@ -11,6 +11,7 @@ import Showcase from "@/components/Major/Showcase";
 import { BorderBeam } from "@/components/ui/border-beam";
 import About from "@/components/Major/About";
 
+
 export default function Home() {
   return (
     <main className="min-h-screen antialiased">
