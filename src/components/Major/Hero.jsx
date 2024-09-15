@@ -83,10 +83,10 @@ function Hero() {
     <div className="minxl:py:0 relative flex h-auto w-full flex-col-reverse items-center justify-between overflow-hidden rounded-md py-10 minxl:h-screen minxl:flex-row minxl:items-center minxl:justify-between">
       <ShootingStars />
       <StarsBackground />
-      <Spotlight
+      {/* <Spotlight
         className="-top-10 left-0 minxl:-top-20 minxl:left-0"
         fill="white"
-      />
+      /> */}
       {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_-75%,black)]"></div> */}
       <div className="relative z-10 mt-2 w-full p-4 px-6 text-center minxl:ml-10 minxl:mt-0 minxl:px-8 minxl:text-start">
         <TailwindConnectBtn text="Introducing GeekPie" className="mb-4" />
@@ -119,7 +119,7 @@ function Hero() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex h-40 w-full select-none items-center justify-center bg-gradient-to-b from-transparent to-white dark:to-black">
           <p
             className={cn(
-              "animate-pulse bg-gradient-to-b from-neutral-300 to-neutral-500 bg-clip-text text-sm capitalize text-transparent",
+              "animate-pulse bg-gradient-to-b from-neutral-300 to-neutral-500 bg-clip-text text-base capitalize text-transparent",
               proximaNovaCondensedBold.className,
             )}
           >
@@ -127,7 +127,8 @@ function Hero() {
           </p>
         </div>
         <div className="absolute bottom-0 z-10 h-80 w-full p-0 md:h-[95%] md:w-[95%] minxl:bottom-2 minxl:h-[95%] minxl:w-[95%]">
-          <World data={sampleArcs} globeConfig={globeConfig} />
+          {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
+          <Scene />
         </div>
       </div>
       <div className="absolute bottom-10 z-30 mx-auto hidden w-full text-center text-neutral-300 minxl:block">

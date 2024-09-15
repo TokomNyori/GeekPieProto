@@ -10,7 +10,7 @@ import {
   ScrollControls,
   useProgress,
 } from "@react-three/drei";
-import { Fog, PointLight } from "three";
+import { Fog, PointLight, SRGBColorSpace } from "three";
 
 function Progressive() {
   const { progress, active } = useProgress();
@@ -21,17 +21,11 @@ const Scene = () => {
   return (
     <Canvas
       //   camera={{ position: [2, 0, 2] }}
-      gl={{ antialias: true }}
+      //camera={{ position: [0, 0, 5], fov: 50 }}
+      gl={{ antialias: true, outputColorSpace: SRGBColorSpace }}
       dpr={[1, 1.5]}
       className={`relative h-screen w-full cursor-grab`}
     >
-      {/* <directionalLight 
-        position={[5, 5, 5]} 
-        intensity={1} 
-        castShadow
-        shadow-mapSize-width={1024}
-        shadow-mapSize-height={1024}
-      /> */}
       {/* Directional light acting like moonlight */}
       <directionalLight
         position={[-3, -3, 3]}
@@ -39,15 +33,13 @@ const Scene = () => {
         intensity={1.5}
         color={"#7aa2ff"} // Enhance the blue hue to simulate moonlight
       />
-      <ambientLight intensity={1} color={"#2d4f8b"} />
-      <pointLight position={[0, 0, 2]} intensity={0.5} color={"#ffddaa"} />
-      <pointLight position={[-2, 1, 1]} intensity={0.3} color={"#ffcc88"} />
-      {/* Adjust the orbit controls */}
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[5, 5, 5]} intensity={1} />
       <OrbitControls enableZoom={false} enableRotate={true} autoRotate={true} />
+      <Environment preset="sunset" environmentIntensity={0.4} />
       <Suspense fallback={<Progressive />}>
         <Model />
       </Suspense>
-      <Environment preset="forest" environmentIntensity={1} />
     </Canvas>
   );
 };

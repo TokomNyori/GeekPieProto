@@ -132,17 +132,17 @@ export default Navbar;
 export const Accountype = () => {
   return (
     <div className="mt-8 grid w-full grid-cols-1 gap-10 minxl:grid-cols-3">
-      <button className="flex min-h-24 w-auto flex-col items-center justify-center rounded-xl border border-zinc-800 p-4 transition-colors duration-200 ease-in-out hover:bg-zinc-900">
+      <button className="general-modal-content flex min-h-24 w-auto flex-col items-center justify-center rounded-xl border border-zinc-800 p-4 transition-colors duration-200 ease-in-out hover:bg-zinc-900">
         <IconRocket className="mb-2" />
         <span className="font-semibold">Visionary</span>
         <span className="text-sm">(Client)</span>
       </button>
-      <button className="flex min-h-24 w-auto flex-col items-center justify-center rounded-xl border border-zinc-800 p-4 transition-colors duration-200 ease-in-out hover:bg-zinc-900">
+      <button className="general-modal-content flex min-h-24 w-auto flex-col items-center justify-center rounded-xl border border-zinc-800 p-4 transition-colors duration-200 ease-in-out hover:bg-zinc-900">
         <IconSparkles className="mb-2" />
         <span className="font-semibold">Creator</span>
         <span className="text-sm">(Freelance Partner)</span>
       </button>
-      <button className="flex min-h-24 w-auto flex-col items-center justify-center rounded-xl border border-zinc-800 p-4 transition-colors duration-200 ease-in-out hover:bg-zinc-900">
+      <button className="general-modal-content flex min-h-24 w-auto flex-col items-center justify-center rounded-xl border border-zinc-800 p-4 transition-colors duration-200 ease-in-out hover:bg-zinc-900">
         <IconSeeding className="mb-2" />
         <span className="font-semibold">Ambassador</span>
         <span className="text-sm">(Referral Partner)</span>

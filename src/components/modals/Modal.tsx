@@ -68,14 +68,14 @@ const Modal = ({ children, className, trigger, title }: ModalProps) => {
           },
         );
         tl.fromTo(
-          ".general-modal-close-btn",
+          ".general-modal-content",
           { scale: 0 },
           { scale: 1, duration: 0.5 },
           "-=0.2",
         );
       } else if (isModalClosing) {
         tl.fromTo(
-          ".general-modal-close-btn",
+          ".general-modal-content",
           { scale: 1 },
           { scale: 0, duration: 0.5 },
         );
@@ -127,7 +127,7 @@ const Modal = ({ children, className, trigger, title }: ModalProps) => {
                   {title}
                 </h6>
                 <div
-                  className="general-modal-close-btn absolute -top-3 right-0 cursor-pointer"
+                  className="general-modal-content absolute -top-3 right-0 cursor-pointer"
                   onClick={handleIsclosing}
                 >
                   <IoCloseCircleOutline className="text-4xl text-gray-100 transition-all duration-300 ease-in-out hover:text-red-400" />
