@@ -116,7 +116,7 @@ function Hero() {
         </div>
       </div>
       <div className="relative mt-14 flex h-80 w-full items-start justify-center md:mt-0 md:h-[36rem] minxl:h-[100%]">
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex h-40 w-full select-none items-center justify-center bg-gradient-to-b from-transparent to-white dark:to-black">
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex h-40 w-full select-none items-center justify-center">
           <p
             className={cn(
               "animate-pulse bg-gradient-to-b from-neutral-300 to-neutral-500 bg-clip-text text-base capitalize text-transparent",
