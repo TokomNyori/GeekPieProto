@@ -20,22 +20,12 @@ function Progressive() {
 const Scene = () => {
   return (
     <Canvas
-      //   camera={{ position: [2, 0, 2] }}
-      //camera={{ position: [0, 0, 5], fov: 50 }}
+      camera={{ position: [0, 0, 6], fov: 50 }}
       gl={{ antialias: true, outputColorSpace: SRGBColorSpace }}
       dpr={[1, 1.5]}
       className={`relative h-screen w-full cursor-grab`}
     >
-      {/* Directional light acting like moonlight */}
-      {/* <directionalLight
-        position={[-3, -3, 3]}
-        castShadow
-        intensity={1.5}
-        color={"#7aa2ff"} // Enhance the blue hue to simulate moonlight
-      /> */}
-      <ambientLight intensity={0.5} color={"#556677"} />{" "}
-      {/* Slightly cooler tone to keep night-time feel */}
-      {/* Directional light positioned to highlight the Earth's edges realistically */}
+      {/* <ambientLight intensity={0.5} color={"#556677"} />{" "}
       <directionalLight
         position={[-80, 30, -60]} // Positioned further to the side and higher to better target the Earth's edge
         castShadow
@@ -48,10 +38,38 @@ const Scene = () => {
         position={[70, 15, -45]} // Positioned to create a gentle highlight on the opposite edge
         intensity={0.3} // Reduced intensity to enhance edge lighting without affecting the center
         color={"#ffb877"} // Warm color to complement the main light
+      /> */}
+      {/* Darker blue ambient light to enhance the night-time look */}
+      <ambientLight intensity={1} color="#0f0f1f" />
+
+      {/* Multiple directional lights to evenly distribute light across the Earth */}
+      <directionalLight
+        position={[10, 10, 10]} // Positioned to provide even lighting
+        intensity={0.7} // Moderate intensity for balanced illumination
+        color="#ffffbb" // Neutral warm tone
       />
-      {/* <directionalLight position={[5, 5, 5]} intensity={1} /> */}
+
+      <directionalLight
+        position={[-10, -10, 10]} // Opposite side for balance
+        intensity={0.7} // Matching intensity to distribute light evenly
+        color="#ffffbb"
+      />
+
+      <directionalLight
+        position={[10, -10, -10]} // Additional light to cover any dark spots
+        intensity={0.7}
+        color="#ffffbb"
+      />
+
+      <directionalLight
+        position={[-10, 10, -10]} // Final light to ensure full coverage
+        intensity={0.7}
+        color="#ffffbb"
+      />
+
+      {/* Environment light for soft global illumination */}
+      <Environment preset="night" background={false} environmentIntensity={0.2} />
       <OrbitControls enableZoom={false} enableRotate={true} autoRotate={true} />
-      <Environment preset="sunset" environmentIntensity={0.2} />
       <Suspense fallback={<Progressive />}>
         <Model />
       </Suspense>
