@@ -73,10 +73,6 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
   ssr: false,
 });
 
-const Scene = dynamic(() => import("@/components/test/Scene"), {
-  ssr: false,
-});
-
 function Hero() {
   //dark:bg-grid-white/[0.2] bg-grid-black/[0.2]
   return (
