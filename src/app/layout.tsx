@@ -78,7 +78,6 @@ const proxmaNova = localFont({
   display: "swap",
 });
 
-
 export const metadata: Metadata = {
   title: "GeekPie",
   description: "Software Company",

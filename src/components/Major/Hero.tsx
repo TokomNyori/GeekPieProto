@@ -116,7 +116,7 @@ function Hero() {
         </div>
       </div>
       <div className="relative mt-14 flex h-80 w-full items-start justify-center md:mt-0 md:h-[36rem] minxl:h-[100%]">
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex h-40 w-full select-none items-center justify-center">
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex h-40 w-full select-none items-center justify-center bg-gradient-to-b from-transparent dark:to-black to-white">
           <p
             className={cn(
               "animate-pulse bg-gradient-to-b from-neutral-300 to-neutral-500 bg-clip-text text-base capitalize text-transparent",
@@ -126,9 +126,8 @@ function Hero() {
             We work globally
           </p>
         </div>
-        <div className="absolute bottom-0 z-10 h-[21rem] w-full p-0 md:h-[95%] md:w-[95%] minxl:bottom-2 minxl:h-[95%] minxl:w-[95%]">
-          {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
-          <Scene />
+        <div className="absolute bottom-0 z-10 h-80 w-full p-0 md:h-[95%] md:w-[95%] minxl:bottom-2 minxl:h-[95%] minxl:w-[95%]">
+          <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
       <div className="absolute bottom-10 z-30 mx-auto hidden w-full text-center text-neutral-300 minxl:block">

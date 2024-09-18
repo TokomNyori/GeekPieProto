@@ -3,21 +3,82 @@
 @tailwind utilities;
 
 @layer base {
-  /* .line {
-    fill: none;
-    stroke: white;
-    stroke-width: 2px;
+  .glow-texts {
+    animation: glowText 3.5s linear infinite;
   }
 
-  #svg {
-    max-width: 320px;
-    overflow: visible;
+  @keyframes glowText {
+    0% {
+      @apply text-red-400;
+    }
+
+    25% {
+      @apply text-green-400;
+    }
+
+    50% {
+      @apply text-blue-400;
+    }
+
+    75% {
+      @apply text-yellow-400;
+    }
+
+    100% {
+      @apply text-red-400;
+    }
   }
 
-  .ball {
-    fill: white;
-    visibility: hidden;
-  } */
-
+  .marquee {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  }
   
+  .marquee-items {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-around;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    animation-play-state: running;
+  }
+  
+  .marquee:hover .marquee-items {
+    animation-play-state: paused; /* Pause animation on hover */
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .image-group {
+    display: grid;
+    place-items: center;
+    width: 9rem;
+    /* width: clamp(10rem, 2rem + 50vw, 30rem); */
+    padding: 1.5rem;
+  }
+
+  .img {
+    object-fit: contain;
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}
+
+
+/*Media Queries*/
+@media (max-width: 767px) {
+  .image-group {
+    padding: 1rem;
+  }
 }

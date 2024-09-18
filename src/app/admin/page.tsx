@@ -6,7 +6,12 @@ export const metadata: Metadata = {
 };
 
 function Admin() {
-  return <div>page</div>;
+  return (
+    <main className="min-h-screen antialiased">
+      ADMIN
+      <div className="h-96"></div>
+    </main>
+  );
 }
 
 export default Admin;

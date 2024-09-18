@@ -2,6 +2,7 @@
 import { Canvas, useThree } from "@react-three/fiber";
 import { Suspense } from "react";
 import Model from "./Model";
+import Model2 from "./Model2";
 import {
   Environment,
   Html,
@@ -68,10 +69,14 @@ const Scene = () => {
       />
 
       {/* Environment light for soft global illumination */}
-      <Environment preset="night" background={false} environmentIntensity={0.2} />
+      <Environment
+        preset="night"
+        background={false}
+        environmentIntensity={0.2}
+      />
       <OrbitControls enableZoom={false} enableRotate={true} autoRotate={true} />
       <Suspense fallback={<Progressive />}>
-        <Model />
+        <Model2 />
       </Suspense>
     </Canvas>
   );
