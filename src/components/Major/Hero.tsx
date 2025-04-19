@@ -12,6 +12,7 @@ import { HoverBorderGradient } from "@/components/buttons/hover-border-gradient"
 import localFont from "next/font/local";
 import clsx from "clsx";
 import { cn } from "@/lib/utils";
+
 const proxmaNova = localFont({
   src: [
     {
