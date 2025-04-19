@@ -6,7 +6,7 @@ import "./globalsTwo.css";
 import "./globals.css";
 import Navbar from "@/components/Major/Navbar";
 import localFont from "next/font/local";
-import { Toaster } from "@/components/ui/sonner";
+//import { Toaster } from "@/components/ui/sonner";
 //import { AuthProvider } from "@/components/auth/auth-provider";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -97,7 +97,6 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${GeistSans.className}`}>
-        <Toaster />
         <div className="dark relative flex w-full items-center justify-center">
           <Navbar />
         </div>
