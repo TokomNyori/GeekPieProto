@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
+import { SessionProvider } from "next-auth/react";
+import { auth } from "@/auth";
 import "./globalsTwo.css";
 import "./globals.css";
 import Navbar from "@/components/Major/Navbar";
 import localFont from "next/font/local";
+import { Toaster } from "@/components/ui/sonner";
+import { AuthProvider } from "@/components/auth/auth-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 const formulaCondensed = localFont({
@@ -83,19 +87,23 @@ export const metadata: Metadata = {
   description: "Software Company",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await auth();
   return (
-    <html lang="en">
-      <body className={`${GeistSans.className} dark`}>
-        <div className="relative flex w-full items-center justify-center">
-          <Navbar />
-        </div>
-        {children}
-      </body>
-    </html>
+    <AuthProvider session={session}>
+      <html lang="en">
+        <body className={`${GeistSans.className}`}>
+          <Toaster />
+          <div className="dark relative flex w-full items-center justify-center">
+            <Navbar />
+          </div>
+          {children}
+        </body>
+      </html>
+    </AuthProvider>
   );
 }

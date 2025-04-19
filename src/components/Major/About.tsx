@@ -4,11 +4,7 @@ import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import {
-  GSDevTools,
-  MotionPathPlugin,
-  ScrollTrigger,
-} from "gsap/all";
+import { GSDevTools, MotionPathPlugin, ScrollTrigger } from "gsap/all";
 
 import { IconUserCheck, IconBolt, IconSchool } from "@tabler/icons-react";
 import ShineBorder from "../ui/shine-border";
@@ -117,7 +113,7 @@ function About() {
       <div className="flex flex-col items-center justify-center gap-10 px-6 md:max-w-2xl lg:max-w-4xl lg:flex-row xl:max-w-5xl">
         <div className="tracking-wider lg:w-3/5">
           <h2 className="text-center uppercase lg:text-start">
-            Who’s Behind GeekPie?
+            Who’s Behind Xvariate?
           </h2>
           <p className="mt-5 text-base leading-relaxed">
             Hi! We’re a small team that loves solving problems with software.
@@ -132,9 +128,9 @@ function About() {
               breakfast
             </q>
             . <br />
-            We started GeekPie to help businesses create a strong online
-            presence with unique web apps that stand out and scale up. Plus, we
-            share web development tips—and a bit of fun—on{" "}
+            We started Xvariate (formerly GeekPie) to help businesses create a
+            strong online presence with unique web apps that stand out and scale
+            up. Plus, we share web development tips—and a bit of fun—on{" "}
             <Link
               href={`https://www.instagram.com/geekpie.in/`}
               target="_blank"
@@ -146,16 +142,16 @@ function About() {
           </p>
         </div>
         <ShineBorder
-          className="bg-background relative flex h-[26rem] w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl lg:h-[23rem] lg:w-2/5"
+          className="relative flex h-[26rem] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl lg:h-[23rem] lg:w-2/5"
           color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
         >
-          <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-            GeekPie
+          <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-[4.3rem] font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+            Xvariate
           </span>
         </ShineBorder>
       </div>
-      <div className="relative -z-10 mt-16 flex flex-col items-center justify-center pt-20">
-        <div className="box absolute left-[14.3rem] top-3 flex items-start justify-start space-x-2 rounded-full">
+      <div className="relative z-10 mt-16 flex flex-col items-center justify-center pt-20">
+        <div className="box absolute left-[14.3rem] top-3 flex items-start justify-start space-x-2 rounded-full text-white">
           <div className="w-24">
             <Image
               src={`/images/profile-pic.png`}
@@ -166,7 +162,9 @@ function About() {
             />
           </div>
           <div className="flex flex-col items-start justify-start">
-            <p className="ml-1 text-lg">Tokom Nyori <span className="text-xs">(Ind)</span></p>
+            <p className="ml-1 text-lg">
+              Tokom Nyori <span className="text-xs">(Ind)</span>
+            </p>
             <div className="flex flex-col space-y-0.5 text-sm">
               <p className="flex items-center gap-x-1">
                 <IconUserCheck className="h-5 w-5" /> Self-taught Software

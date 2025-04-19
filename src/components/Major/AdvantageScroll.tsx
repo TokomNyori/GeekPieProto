@@ -4,13 +4,13 @@ import Image from "next/image";
 
 function AdvantageScroll() {
   return (
-    <div className="pb-2 overflow-hidden">
+    <div className="overflow-hidden pb-8">
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-3xl md:text-4xl font-semibold text-black dark:text-white capitalize">
+            <h1 className="text-3xl font-semibold capitalize text-black dark:text-white md:text-4xl">
               Unfair Advantage over <br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+              <span className="mt-1 text-4xl font-bold leading-none md:text-[6rem]">
                 your competitors.
               </span>
             </h1>
@@ -22,7 +22,7 @@ function AdvantageScroll() {
           alt="hero"
           height={720}
           width={1400}
-          className="mx-auto rounded-2xl object-cover h-full object-left-top"
+          className="mx-auto h-full rounded-2xl object-cover object-left-top"
           draggable={false}
         />
       </ContainerScroll>

@@ -23,6 +23,7 @@ import { useGSAP } from "@gsap/react";
 import localFont from "next/font/local";
 import Image from "next/image";
 import Modal from "../modals/Modal";
+import { usePathname } from "next/navigation";
 const formulaCondensed = localFont({
   src: [
     {
@@ -51,6 +52,7 @@ const formulaCondensed = localFont({
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+  const pathName = usePathname();
   gsap.registerPlugin(ScrollTrigger, useGSAP);
 
   useGSAP(() => {
@@ -87,7 +89,9 @@ function Navbar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "main-navbar fixed inset-x-0 top-3 z-50 mx-auto max-w-2xl px-4 md:px-0",
+        pathName !== "/"
+          ? "hidden"
+          : "main-navbar fixed inset-x-0 top-3 z-50 mx-auto max-w-2xl px-4 md:px-0",
         className,
       )}
     >
@@ -95,9 +99,14 @@ function Navbar({ className }: { className?: string }) {
         <div
           className={`flex h-8 w-8 items-center justify-center rounded-full border bg-gradient-to-b from-neutral-200 to-neutral-400 bg-clip-text text-base tracking-wide text-transparent`}
         >
-          <Image src={`/1.png`} height={100} width={100} alt="geekpie logo" />
+          <Image
+            src={`/darkmode-xv-logo-transparent.svg`}
+            height={100}
+            width={100}
+            alt="xvariate logo"
+          />
         </div>
-        <div className="shadow-input relative flex justify-center space-x-4">
+        <div className="relative flex justify-center space-x-4 shadow-input">
           <HoveredLink className="hidden md:block" href="/">
             Home
           </HoveredLink>
@@ -113,10 +122,10 @@ function Navbar({ className }: { className?: string }) {
           <HoveredLink href="#">Contact</HoveredLink>
         </div>
         <div className="flex cursor-pointer items-center space-x-1 rounded-full">
-          <IconMenu2 className="h-[1.7rem] w-[1.7rem]" />
+          <IconMenu2 className="h-[1.7rem] w-[1.7rem] text-gray-200" />
           <Modal
             title="Choose Your Path"
-            trigger={<IconUserCircle className="h-8 w-8" />}
+            trigger={<IconUserCircle className="h-8 w-8 text-gray-200" />}
             className="min-w-[90%] max-w-[95%] px-6 minxl:min-w-[40%]"
           >
             <Accountype />
@@ -131,7 +140,7 @@ export default Navbar;
 
 export const Accountype = () => {
   return (
-    <div className="mt-8 grid w-full grid-cols-1 gap-10 minxl:grid-cols-3">
+    <div className="mt-8 grid w-full grid-cols-1 gap-10 text-gray-200 minxl:grid-cols-3">
       <button className="general-modal-content flex min-h-24 w-auto flex-col items-center justify-center rounded-xl border border-zinc-800 p-4 transition-colors duration-200 ease-in-out hover:bg-zinc-900">
         <IconRocket className="mb-2" />
         <span className="font-semibold">Visionary</span>

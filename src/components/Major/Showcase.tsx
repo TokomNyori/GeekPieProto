@@ -3,16 +3,31 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { BorderBeam } from "../ui/border-beam";
 import ThreeDCard from "../minor/ThreeDCard";
+import { Button } from "../ui/button";
 
 function Showcase() {
   return (
-    <div className="section flex flex-col justify-center items-center w-full">
+    <div className="section flex w-full flex-col items-center justify-center">
       {/* <div className="h-[1px] w-full flex justify-center items-start relative overflow-hidden"><BorderBeam size={250} duration={12} delay={9} /></div> */}
-    <h2 className="text-center uppercase">A Glimpse at the <br/> Web Wonders We’ve Crafted</h2>
-    <div className="flex justify-center items-center gap-10 flex-wrap px-4 mt-10">
-      <ThreeDCard title="K3 Gas Service" image="k3-demo.png" link="https://www.k3gasservice.com/"/>
-      <ThreeDCard title="GeekPie AI" image="geekpieai-demo.png" link="https://geekpieai.vercel.app/"/>
-    </div>
+      <h2 className="text-center uppercase">
+        A Glimpse at the <br /> Web Wonders We’ve Crafted
+      </h2>
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-10 px-4">
+        <ThreeDCard
+          title="K3 Gas Service"
+          image="k3-demo.png"
+          link="https://www.k3gasservice.com/"
+        />
+        <ThreeDCard
+          title="Xvariate AI"
+          image="geekpieai-demo.png"
+          link="https://geekpieai.vercel.app/"
+        />
+      </div>
+
+      <Button className="mt-12 bg-transparent" size={"lg"} variant={"outline"}>
+        See More
+      </Button>
     </div>
   );
 }

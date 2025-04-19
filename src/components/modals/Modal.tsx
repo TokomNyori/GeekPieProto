@@ -125,7 +125,7 @@ const Modal = ({ children, className, trigger, title }: ModalProps) => {
         createPortal(
           <div
             ref={modalBgRef}
-            className="modal-bg-z-index fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm"
+            className="modal-bg-z-index fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 text-gray-200 backdrop-blur-sm"
           >
             <div
               className={cn(

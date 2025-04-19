@@ -85,7 +85,10 @@ function Hero() {
       /> */}
       {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_-75%,black)]"></div> */}
       <div className="relative z-10 mt-2 w-full p-4 px-6 text-center minxl:ml-10 minxl:mt-0 minxl:px-8 minxl:text-start">
-        <TailwindConnectBtn text="Introducing GeekPie" className="mb-4" />
+        <TailwindConnectBtn
+          text={`Introducing ${" "} Xvariate`}
+          className="mb-4"
+        />
         <h1
           className={cn(
             `bg-gradient-to-b from-yellow-50 to-neutral-500 bg-clip-text py-1 text-4xl font-bold uppercase text-transparent md:text-[3.5rem] md:leading-none`,
@@ -103,7 +106,7 @@ function Hero() {
           We craft web and mobile apps that deliver real results and help your
           business grow. No Chatter. No BS. Just Results.
         </p>
-        <Button className="">Chat GeekPIe AI</Button>
+        <Button className="">Chat XvAI</Button>
 
         <div className="mt-10 animate-pulse text-neutral-300 minxl:hidden">
           Backed by
@@ -112,7 +115,7 @@ function Hero() {
         </div>
       </div>
       <div className="relative mt-14 flex h-80 w-full items-start justify-center md:mt-0 md:h-[36rem] minxl:h-[100%]">
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex h-40 w-full select-none items-center justify-center bg-gradient-to-b from-transparent dark:to-black to-white">
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex h-40 w-full select-none items-center justify-center bg-gradient-to-b from-transparent to-white dark:to-black">
           <p
             className={cn(
               "animate-pulse bg-gradient-to-b from-neutral-300 to-neutral-500 bg-clip-text text-base capitalize text-transparent",

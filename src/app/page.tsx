@@ -14,7 +14,7 @@ import About from "@/components/Major/About";
 
 export default function Home() {
   return (
-    <main className="min-h-screen antialiased">
+    <main className="min-h-screen antialiased bg-black text-gray-200 dark">
       <Hero />
       <Introduction />
       <AdvantageScroll />
