@@ -86,7 +86,7 @@ function Hero() {
       {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_-75%,black)]"></div> */}
       <div className="relative z-10 mt-2 w-full p-4 px-6 text-center minxl:ml-10 minxl:mt-0 minxl:px-8 minxl:text-start">
         <TailwindConnectBtn
-          text={`Introducing ${" "} Xvariate`}
+          text={`Introducing ${"  "} Xvariate`}
           className="mb-4"
         />
         <h1
@@ -106,7 +106,7 @@ function Hero() {
           We craft web and mobile apps that deliver real results and help your
           business grow. No Chatter. No BS. Just Results.
         </p>
-        <Button className="">Chat XvAI</Button>
+        <Button className="">Chat with XvAI</Button>
 
         <div className="mt-10 animate-pulse text-neutral-300 minxl:hidden">
           Backed by
