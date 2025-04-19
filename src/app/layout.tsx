@@ -10,6 +10,7 @@ import { Toaster } from "@/components/ui/sonner";
 //import { AuthProvider } from "@/components/auth/auth-provider";
 
 const inter = Inter({ subsets: ["latin"] });
+
 const formulaCondensed = localFont({
   src: [
     {
@@ -35,6 +36,7 @@ const formulaCondensed = localFont({
   ],
   display: "swap",
 });
+
 const proxmaNova = localFont({
   src: [
     {
